@@ -1,6 +1,5 @@
 import { Injectable, HttpService } from '@nestjs/common';
 import { FirebaseService } from '../firebase/firebase.service';
-import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { Match } from 'src/controllers/models/Match';
 
@@ -16,11 +15,9 @@ export class MatchService {
         let match: Match;
         this.findMatch(`${URL}${idTournament}/${idMatch}`).subscribe(data => {
             match = data.data;
-            console.log(match);
             match.goals_team1 = matchData.goals_team1;
             match.goals_team2 = matchData.goals_team2;
             match.isPlayed = true;
-            console.log(match);
             return this.firebaseService.modifyElement(match, `/json/${idTournament}/matches/${idMatch}`);
         });
     }
