@@ -68,7 +68,7 @@ body {
 </div>
 
 
-## Actualizar Información de un partido
+## Actualizar Información de un equipo
 
 ```bash
 put('localhost:3010/team/:idTournament:/:idTeam')
