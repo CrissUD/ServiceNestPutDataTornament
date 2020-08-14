@@ -1,7 +1,7 @@
 import { Injectable, HttpService } from '@nestjs/common';
 import { FirebaseService } from '../firebase/firebase.service';
 import { Observable } from 'rxjs';
-import { Match } from 'src/controllers/models/Match';
+import { Match } from 'src/models/Match';
 
 const URL = 'http://localhost:3005/api/match/';
 

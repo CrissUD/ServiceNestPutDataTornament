@@ -1,7 +1,7 @@
 import { Injectable, HttpService } from '@nestjs/common';
 import { FirebaseService } from '../firebase/firebase.service';
 import { Observable } from 'rxjs';
-import { Team } from 'src/controllers/models/Team';
+import { Team } from 'src/models/Team';
 
 const URL = 'http://localhost:3005/api/team/';
 

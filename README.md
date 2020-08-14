@@ -27,13 +27,64 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Servicio Nest encargado de la actualización de datos de entidades y elementos dentro de una **Base de datos no relacional montada en Firebase** que intervienen en la participación de un torneo de fútbol (Cuadrangular).
+Actualiza:
+* **Información especifica de un partido de acuerdo de los resultados enviados (goles anotados).**.
+* **Información especifica de un equipo de acuerdo de los resultados enviados (goles anotados).**.
+
 
 ## Installation
 
 ```bash
 $ npm install
 ```
+
+
+# Pruebas
+
+## Puerto
+```bash
+port: 3010
+```
+
+## Rutas y envíos
+
+## Actualizar Información de un partido
+
+```bash
+put('localhost:3010/match/:idTournament:/:idMatch')
+body {
+    "goals_team1": 3,
+    "goals_team2": 2
+}
+```
+<div align='center'>
+    <img  src='https://i.imgur.com/g8EYZ9U.png'>
+    <p>Petición de actualización datos de un partido.</p>
+</div>
+<div align='center'>
+    <img  src='https://i.imgur.com/VldIKA9.png'>
+    <p>Resultado actualización de datos de un partido.</p>
+</div>
+
+
+## Actualizar Información de un partido
+
+```bash
+put('localhost:3010/team/:idTournament:/:idTeam')
+body {
+    "goals_local": 3,
+    "goals_ops": 2
+}
+```
+<div align='center'>
+    <img  src='https://i.imgur.com/VSUm6x3.png'>
+    <p>Petición de actualización datos de un equipo.</p>
+</div>
+<div align='center'>
+    <img  src='https://i.imgur.com/YKfWHFg.png'>
+    <p>Resultado actualización de datos de un equipo.</p>
+</div>
 
 ## Running the app
 
@@ -60,16 +111,6 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
