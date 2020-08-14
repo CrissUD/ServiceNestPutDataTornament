@@ -5,10 +5,11 @@ import { PutTeamDataController } from './controllers/put-team-data/put-team-data
 import { PutMatchDataController } from './controllers/put-match-data/put-match-data.controller';
 import { TeamService } from './services/team/team.service';
 import { MatchService } from './services/match/match.service';
+import { FirebaseService } from './services/firebase/firebase.service';
 
 @Module({
   imports: [],
   controllers: [AppController, PutTeamDataController, PutMatchDataController],
-  providers: [AppService, TeamService, MatchService],
+  providers: [AppService, TeamService, MatchService, FirebaseService],
 })
 export class AppModule {}
