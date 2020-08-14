@@ -1,7 +1,7 @@
 import { Controller, Put, Body, Param } from '@nestjs/common';
 import { MatchService } from 'src/services/match/match.service';
 
-@Controller('put-match-data')
+@Controller('match')
 export class PutMatchDataController {
 
     constructor (private matchService: MatchService) {}
